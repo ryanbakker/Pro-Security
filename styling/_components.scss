@@ -1,0 +1,116 @@
+// Mobile navigation menu
+@import './base';
+
+.head-bg {
+    @include gradient;
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.mobile {
+    @include gradient;
+    width: 80%;
+    height: 100vh;
+    display: block;
+    transition: all 1s;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(120%);
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 30px;
+        margin-top: 30px;
+
+        li {
+            padding: 30px 0px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: $barlow;
+                font-size: 26px;
+                padding: 20px 50px;
+            }
+
+        }
+
+    }
+
+    .small-logo {
+        width: 60px;
+        height: auto;
+        margin-left: 4%;
+        margin-top: 10px;
+    }
+
+}
+
+.show-mobile {
+    transform: translateX(0);
+}
+
+.hamburger {
+    position: absolute;
+    top: 15px;
+    right: 4%;
+    z-index: 15;
+    display: inline-block;
+    filter: invert(1);
+}
+
+.crumbs {
+    
+    p {
+    color: grey;
+    font-family: $barlow;
+    margin-left: 28px;
+    }
+
+    a {
+        color: grey
+    }
+}
+
+.back-btn {
+    @include gradient;
+    margin-left: 28px;
+    text-align: center;
+    width: 90px;
+    padding: 10px 5px;
+    border-radius: 7px;
+
+    a {
+        color: lightgrey;
+        text-decoration: none;
+    }
+
+    h6 {
+        display: inline-block;
+        font-family: $barlow;
+        font-size: 17px;
+        margin: 0;
+        font-weight: 500;
+    }
+
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: 8;
+    opacity: 0.8;
+    transform: translateX(120%);
+}
+
+.show-overlay {
+    transform: translateX(0);
+    transition: ease 1s;
+}
